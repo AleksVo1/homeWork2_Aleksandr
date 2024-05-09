@@ -31,6 +31,7 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
-    # Run Java tests
-    - name: Run tests
-      run: mvn test
+    - name: Run tests with Playwright and TestNG
+      run: |
+        export DISPLAY=:99
+        xvfb-run mvn test
