@@ -12,7 +12,7 @@ public class Test4 extends BaseTest{
         Page page = browser.newPage();
         page.navigate("https://the-internet.herokuapp.com/javascript_alerts");
 
-        String[] message = {""};
+        String[] message1 = {""};
         page.onceDialog(alert -> {
             message[0] = alert.message();
             alert.accept("Test message");
